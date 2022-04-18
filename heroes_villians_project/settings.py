@@ -70,6 +70,8 @@ WSGI_APPLICATION = 'heroes_villians_project.wsgi.application'
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
+
+
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -109,6 +111,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 try:
-    from heroes_villians_project.local_setting import *
+    from heroes_villians_project.local_settings import *
 except ImportError:
      pass
