@@ -75,8 +75,11 @@ WSGI_APPLICATION = 'heroes_villians_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'heroes_villians_project',
+        'HOST':'localhost',
+        'USER':'root',
+        'PASSWORD': 'Password2022'
     }
 }
 
@@ -121,3 +124,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+try:
+    from heroes_villians_project.local_setting import *
+except ImportError:
+     pass
